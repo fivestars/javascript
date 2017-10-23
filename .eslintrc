@@ -276,7 +276,9 @@
     "no-mixed-operators": 0,               // disallow mixed binary operators
     "no-mixed-spaces-and-tabs": 0,         // disallow mixed spaces and tabs for indentation
     "no-multi-assign": "error",            // disallow use of chained assignment expressions
-    "no-multiple-empty-lines": "error",    // disallow multiple empty lines
+    "no-multiple-empty-lines": ["error", { // disallow multiple empty lines
+      "max": 1                               // more strict than the default of 2
+    }],
     "no-negated-condition": 0,             // disallow negated conditions
     "no-nested-ternary": "error",          // disallow nested ternary expressions
     "no-new-object": "error",              // disallow Object constructors
@@ -298,6 +300,7 @@
       "error",
     "nonblock-statement-body-position": 0, // enforce the location of single-line statements
     "object-curly-newline": ["error", {    // enforce consistent line breaks inside braces
+        "consistent": true,
         "minProperties": 2
     }],
     "object-curly-spacing":                // enforce consistent spacing inside braces
@@ -328,7 +331,7 @@
     "require-jsdoc": 0,                    // require JSDoc comments
     "semi": ["error", "always"],           // require or disallow semicolons instead of ASI
     "semi-spacing": "error",               // enforce consistent spacing before and after semicolons
-    "semi-style": 0,                       // enforce location of semicolons
+    "semi-style": ["error", "last"],       // enforce location of semicolons
     "sort-keys": 0,                        // require object keys to be sorted
     "sort-vars": 0,                        // require variables within the same declaration block to be sorted
     "space-before-blocks":                 // enforce consistent spacing before blocks
