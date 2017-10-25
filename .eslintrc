@@ -155,13 +155,7 @@
     "no-param-reassign": "error",         // disallow reassigning function parameters
     "no-proto": 0,                        // disallow the use of the __proto__ property
     "no-redeclare": "error",              // disallow variable redeclaration
-    "no-restricted-properties": [         // disallow certain properties on certain objects
-      "error", {
-        "object": "Math",
-        "property": "pow",
-        "message": "Use the exponentiation operator (**) instead.."
-      }
-    ],
+    "no-restricted-properties": 0,        // disallow certain properties on certain objects
     "no-return-assign": "error",          // disallow assignment operators in return statements
     "no-return-await": 0,                 // disallow unnecessary return await
     "no-script-url": 0,                   // disallow javascript: urls
