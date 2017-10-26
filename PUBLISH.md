@@ -14,4 +14,5 @@
     * `minor` : We make one or more rules more restrictive and optionally relax other rules
     * `patch` : We only relax rules
 1. `git push`
+    You remembered to set `git config --global push.default current` first, didn't you?
 1. `npm publish`
