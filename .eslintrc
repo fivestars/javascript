@@ -198,7 +198,9 @@
     "no-undef-init": "error",             // disallow initializing variables to undefined
     "no-undefined": "error",              // disallow the use of undefined as an identifier
     "no-unused-vars": "error",            // disallow unused variables
-    "no-use-before-define": "error",      // disallow the use of variables before they are defined
+    "no-use-before-define": ["error", {   // disallow the use of variables before they are defined
+        "variables": false                  // Allow functions to reference variables defined later in their outer scope
+    }],
 
     ////////// Stylistic Issues //////////
 
