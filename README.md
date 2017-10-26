@@ -699,17 +699,6 @@
     var isJedi = getProp('jedi');
     ```
 
-  <a name="es2016-properties--exponentiation-operator"></a>
-  - [6.3](#es2016-properties--exponentiation-operator) Use exponentiation operator `**` when calculating exponentiations. [`no-restricted-properties`](http://eslint.org/docs/rules/no-restricted-properties).
-
-    ```javascript
-    // bad
-    var binary = Math.pow(2, 10);
-
-    // good
-    var binary = 2 ** 10;
-    ```
-
 **[⬆ back to top](#table-of-contents)**
 
 ## Variables
