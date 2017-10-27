@@ -9,7 +9,7 @@
     1. _Email_: infra@fivestars.com
 1. `git pull --rebase`
 1. `npm version <update-type>`
-    Where <update-type> is
+    Where `<update-type>` is
     * `major` : We rewrite everything (probably never used)
     * `minor` : We make one or more rules more restrictive and optionally relax other rules
     * `patch` : We only relax rules
