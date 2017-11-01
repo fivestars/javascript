@@ -227,12 +227,7 @@
     "id-blacklist": 0,                     // disallow specified identifiers
     "id-length": 0,                        // enforce minimum and maximum identifier lengths
     "id-match": 0,                         // require identifiers to match a specified regular expression
-    "indent": ["error", 4, {               // enforce consistent indentation
-      "ignoredNodes": [
-        ":nth-child(1)",
-        ":nth-child(2)"
-      ]
-    }],
+    "indent": ["error", 4],                // enforce consistent indentation
     "jsx-quotes": 0,                       // enforce the consistent use of either double or single quotes in JSX attributes
     "key-spacing": ["error", {             // enforce consistent spacing between keys and values in object literal properties
         "beforeColon": false,
@@ -322,7 +317,10 @@
       {"blankLine": "always", "prev": "multiline-block-like", "next": "*"},
       {"blankLine": "always", "prev": "*", "next": "return"}
     ],
-    "quote-props": ["error", "as-needed"], // require quotes around object literal property names
+    "quote-props": [                       // require quotes around object literal property names
+      "error",
+      "consistent-as-needed"
+    ],
     "quotes": ["error", "single"],         // enforce the consistent use of either backticks, double, or single quotes
     "require-jsdoc": 0,                    // require JSDoc comments
     "semi": ["error", "always"],           // require or disallow semicolons instead of ASI
