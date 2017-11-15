@@ -885,6 +885,28 @@
     var sum = _.sum(array);
     ```
 
+  <a name="variables--abbeviations"></a><a name="7.8"></a>
+  - [7.8](#variables--abbeviations) Avoid abbreviations. 
+    Code is read a lot more times than it's written.  Prefer full words to help convey their meaning, but keep the utility of extremely common abbreviations.
+    
+    ```javascript
+    // bad  
+    var adjRnAvg = 12.8;
+    try {} catch(ex);
+    
+    // good
+    var adjustedRainfallAverage = 12.8;
+    try {} catch(exception);
+    
+    
+    // bad
+    var loopIndexCounter = 0;
+    var cancelButtonHyperTextMarkupLanguage = '...';
+    
+    // good
+    var i = 0;
+    var cancelButtonHtml = '...';
+    ```
 **[⬆ back to top](#table-of-contents)**
 
 ## Hoisting
