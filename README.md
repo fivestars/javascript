@@ -912,7 +912,7 @@
 ## Hoisting
 
   <a name="hoisting--about"></a><a name="8.1"></a>
-  - [8.1](#hoisting--about) `var` declarations get hoisted to the top of their scope, but their assignment does not.
+  - [8.1](#hoisting--about) `var` declarations get hoisted to the top of their scope, but their assignment does not.  Declare all variables before their first use.  [`no-use-before-define`](http://eslint.org/docs/rules/no-use-before-define)
 
     ```javascript
     // we know this wouldn’t work (assuming there
@@ -941,7 +941,7 @@
 
     ```
 
-    For this reason declare all variables at the top of their function blocks.
+    Declare all variables before their first use:
 
     ```javascript
     // bad
@@ -957,11 +957,24 @@
 
     // good
     function foo(wombats, marmosets) {
-        var numWombats = wombats.length;          var numMarmosets = marmosets.length;
+        var numWombats = wombats.length;          
+        var numMarmosets = marmosets.length;
         console.log('Total: ' + numWombats + numMarmosets);
         console.log('Wombats: ' + wombatCount);
         console.log('Marmosets count: ' + numMarmosets);
     }
+
+    // also good
+    function foo(wombats, marmosets) {
+        var wombatCount = Zoo.getCount('wombat');
+        console.log('Wombats: ' + wombatCount);
+    
+        var marmosetCount = Zoo.getCount('marmoset');
+        console.log('Marmosets count: ' + numMarmosets);
+    
+        console.log('Total: ' + numWombats + numMarmosets);    
+    }
+
     ```
 
   <a name="hoisting--anon-expressions"></a><a name="8.2"></a>
@@ -2247,7 +2260,6 @@
   * [`no-useless-return`](https://eslint.org/docs/rules/no-useless-return)
   * [`use-isnan`](https://eslint.org/docs/rules/use-isnan)
   * [`valid-typeof`](https://eslint.org/docs/rules/valid-typeof)
-  * [`vars-on-top`](https://eslint.org/docs/rules/vars-on-top)
   * [`yoda`](https://eslint.org/docs/rules/yoda)
 
 ## AngularJS
