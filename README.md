@@ -946,33 +946,33 @@
     ```javascript
     // bad
     function foo(wombats, marmosets) {
-        console.log('Total: ' + numWombats + numMarmosets);
+        console.log('Total: ' + wombatCount + marmosetCount);
 
-        var numWombats = wombats.length;
+        var wombatCount = wombats.length;
         console.log('Wombats: ' + wombatCount);
 
-        var numMarmosets = marmosets.length;
-        console.log('Marmosets count: ' + numMarmosets);
+        var marmosetCount = marmosets.length;
+        console.log('Marmosets count: ' + marmosetCount);
     }
 
     // good
     function foo(wombats, marmosets) {
-        var numWombats = wombats.length;          
-        var numMarmosets = marmosets.length;
-        console.log('Total: ' + numWombats + numMarmosets);
+        var wombatCount = wombats.length;          
+        var marmosetCount = marmosets.length;
+        console.log('Total: ' + wombatCount + marmosetCount);
         console.log('Wombats: ' + wombatCount);
-        console.log('Marmosets count: ' + numMarmosets);
+        console.log('Marmosets count: ' + marmosetCount);
     }
 
     // also good
     function foo(wombats, marmosets) {
-        var wombatCount = Zoo.getCount('wombat');
+        var wombatCount = wombats.length;
         console.log('Wombats: ' + wombatCount);
     
-        var marmosetCount = Zoo.getCount('marmoset');
-        console.log('Marmosets count: ' + numMarmosets);
+        var marmosetCount = marmosets.length;
+        console.log('Marmosets count: ' + marmosetCount);
     
-        console.log('Total: ' + numWombats + numMarmosets);    
+        console.log('Total: ' + wombatCount + marmosetCount);    
     }
 
     ```
