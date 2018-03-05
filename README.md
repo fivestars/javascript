@@ -330,24 +330,27 @@
     ```
 
   <a name="functions--mutate-params"></a><a name="4.7"></a>
-  - [4.7](#functions--mutate-params) Never mutate parameters. [`no-param-reassign`](http://eslint.org/docs/rules/no-param-reassign.html)
+  - [4.7](#functions--mutate-params) Mutate parameters only at the top of the function, in a 
+  parameter-processing/early-return block.  (Unless the funtion exists solely to mutate the input parameters)
 
-    > Why? Manipulating objects passed in as parameters can cause unwanted variable side effects in the original caller.
+    > From experience in other languages, notably pure functional ones, many coders have a reasonable expectation that 
+    > input parameters will remain unchanged throughout the code body.  We use the common idiom of checking and 
+    > processing parameters (e.g. setting defaults) as an inital block for the function.  Avoid mutation after such 
+    > processing because it violates expectations.    
 
     ```javascript
     // bad
-    function f1(obj) {
-        obj.key = 1;
+    function f(p) {
+        // lots of code
+        p = 7;
+        // lots more code
     }
 
     // good
-    function f1(obj) {
-        var key = obj.key;
-    }
-
-    // overkill
-    function f2(obj) {
-        var key = Object.prototype.hasOwnProperty.call(obj, 'key') ? obj.key : 1;
+    function f(p) {
+        p = p || 'default';
+    
+        // meat of function
     }
     ```
 
