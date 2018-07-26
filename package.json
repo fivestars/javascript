@@ -16,14 +16,14 @@
     "fivestars",
     "style guide"
   ],
-  "author": "Rob Corell <robert.corell@fivestars.com>",
+  "author": "Rob Corell <rob.corell@fivestars.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/fivestars/javascript/issues"
   },
   "homepage": "https://github.com/fivestars/javascript#readme",
   "peerDependencies": {
-    "eslint": ">= 4.9.0"
+    "eslint": ">= 4.0.0"
   },
   "dependencies": {
     "decomment": "^0.9.1"
